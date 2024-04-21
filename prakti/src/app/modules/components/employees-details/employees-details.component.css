@@ -1,0 +1,38 @@
+.background-container {
+  /* background-image: url('/assets/Details.png'); */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the content vertically */
+  align-items: center; /* Center the content horizontally */
+  align-items: center; /* Center the content horizontally */
+  /* overflow-y: auto; */
+}
+.demo-table th {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black; /* Add a black line above the table headers */
+}
+.add-button {
+  margin-bottom: 10%; /* Add space between the button and the table */
+}
+.demo-table {
+  opacity: 0.9;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+ 
+}
+.mat-mdc-row .mat-mdc-cell {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  cursor: pointer;
+}
+
+.mat-mdc-row:hover .mat-mdc-cell {
+  border-color: currentColor;
+}
+
