@@ -10,14 +10,12 @@ import { EmployeesDetailsComponent } from './modules/components/employees-detail
 import { EmployeesService } from './modules/services/Employees.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
-import { EditEmployeeComponent } from './modules/components/edit-employee/edit-employee.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { AddEmployeeComponent } from './modules/components/add-employee/add-employee.component';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { DateAdapter, MatNativeDateModule, MAT_DATE_LOCALE, NativeDateAdapter } from '@angular/material/core';
-// import {MatGridListModule} from '@angular/material/grid-gormslist';
 import { MatCardModule } from '@angular/material/card';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { LoginComponent } from './modules/components/login/login.component';
@@ -35,7 +33,6 @@ import { MatSortModule } from '@angular/material/sort';
   declarations: [
     AppComponent,
     EmployeesDetailsComponent,
-    EditEmployeeComponent,
     AddEmployeeComponent,
     LoginComponent,
     AddRoleComponent,
@@ -53,7 +50,6 @@ import { MatSortModule } from '@angular/material/sort';
     MatToolbarModule,
     MatFormFieldModule,
     MatCardModule,
-    // MatGridListModule,
     MatNativeDateModule,
     MatDatepickerModule,
     MatSelectModule,
@@ -71,15 +67,12 @@ import { MatSortModule } from '@angular/material/sort';
     RouterModule, 
     BrowserAnimationsModule,
     RouterModule.forRoot([
+      { path: '', component: LoginComponent },
        { path: 'details', component: EmployeesDetailsComponent },
       { path: 'addEmployee', component: AddEmployeeComponent },
-      { path: '', component: LoginComponent },
       { path: 'addRole', component: AddRoleComponent },
        { path: 'logout', component: LogoutComponent },
-       // {path:'register',component:RegisterComponent},
-       // {path:'logout',component:LogoutComponent},
-        // {path:'courseDetails/:code',component:CourseDetailsComponent}
-        // ניתן להוסיף נתיבים נוספים כרצונך
+      
       ])
   ],
   providers: [EmployeesService,{ provide: MAT_DATE_LOCALE, useValue: 'en-US' }, // Optional: Set the locale

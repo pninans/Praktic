@@ -1,11 +1,7 @@
 .container {
   display: flex;
   height: 100vh;
-
 }
-/* .backgr{
-  background-color: darkgray;
-} */
 .inputs-container {
   flex: 1;
   display: flex;
@@ -14,11 +10,6 @@
   align-items: flex-start;
   padding: 0 20px;
   background-color: darkgray;
-  /* margin-top: 5%;
-  margin-bottom: 8%;
-  margin-left: 5%;
-  margin-right: 5%;
-} */
 }
 .picture-container {
   flex: 1;
@@ -26,7 +17,6 @@
   justify-content: center;
   align-items: center;
 }
-
 .background-image {
   max-width: 100%;
   max-height: 100%;

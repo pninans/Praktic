@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3nv4wsBfLMbhyQaQveBTojHi/fGV28kbVk4NpTTRKVaQ6wtMf78868lt22PQUMlNFfmhiYvJVRFQg42zA0SMgg==",
+  "dgSpecHash": "tlgXZ2+8wj1uHeSrfrfFcY76hUC7O05AbFeQ4JhRDrnmU7vAOMzeAcbQ6wSKE9NMw6tcmI7HILQ10wvKoE8xvQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user1\\Desktop\\Praktic\\prakti\\server\\Praktic.Core\\Praktic.Core.csproj",
+  "projectFilePath": "C:\\Users\\user1\\Desktop\\Praktic\\server\\Praktic.Core\\Praktic.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user1\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\user1\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"

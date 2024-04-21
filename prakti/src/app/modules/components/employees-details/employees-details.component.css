@@ -1,21 +1,19 @@
 .background-container {
-  /* background-image: url('/assets/Details.png'); */
   background-size: cover;
   background-position: center;
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center the content vertically */
-  align-items: center; /* Center the content horizontally */
-  align-items: center; /* Center the content horizontally */
-  /* overflow-y: auto; */
+  justify-content: center; 
+  align-items: center;
+  align-items: center; 
 }
 .demo-table th {
   border-top: 2px solid black;
-  border-bottom: 2px solid black; /* Add a black line above the table headers */
+  border-bottom: 2px solid black;
 }
 .add-button {
-  margin-bottom: 10%; /* Add space between the button and the table */
+  margin-bottom: 10%;
 }
 .demo-table {
   opacity: 0.9;

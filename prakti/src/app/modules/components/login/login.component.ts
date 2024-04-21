@@ -39,7 +39,7 @@ export class LoginComponent {
             const timer = Swal.getPopup()?.querySelector("b");
             timerInterval = setInterval(() => {
               if (timer) {
-                timer.textContent = `${Swal.getTimerLeft()}`; // Check if timer is not null
+                timer.textContent = `${Swal.getTimerLeft()}`; 
               }
             }, 100);
           },
@@ -47,7 +47,7 @@ export class LoginComponent {
             clearInterval(timerInterval);
           }
         }).then((result) => {
-          /* Read more about handling dismissals below */
+       
           if (result.dismiss === Swal.DismissReason.timer) {
             console.log("I was closed by the timer");
           }
@@ -58,7 +58,6 @@ export class LoginComponent {
         }, 3000);
       },
       error: (error) => {
-        // Handle error here, for example, display an alert
         Swal.fire({
           icon: 'error',
           title: 'Oops...',

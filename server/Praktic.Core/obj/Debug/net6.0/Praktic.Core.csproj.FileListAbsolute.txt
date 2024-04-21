@@ -34,3 +34,15 @@ C:\Users\user1\Desktop\Praktic\prakti\server\Praktic.Core\obj\Debug\net6.0\Prakt
 C:\Users\user1\Desktop\Praktic\prakti\server\Praktic.Core\obj\Debug\net6.0\refint\Praktic.Core.dll
 C:\Users\user1\Desktop\Praktic\prakti\server\Praktic.Core\obj\Debug\net6.0\Praktic.Core.pdb
 C:\Users\user1\Desktop\Praktic\prakti\server\Praktic.Core\obj\Debug\net6.0\ref\Praktic.Core.dll
+C:\Users\user1\Desktop\Praktic\server\Praktic.Core\bin\Debug\net6.0\Praktic.Core.deps.json
+C:\Users\user1\Desktop\Praktic\server\Praktic.Core\bin\Debug\net6.0\Praktic.Core.dll
+C:\Users\user1\Desktop\Praktic\server\Praktic.Core\bin\Debug\net6.0\Praktic.Core.pdb
+C:\Users\user1\Desktop\Praktic\server\Praktic.Core\obj\Debug\net6.0\Praktic.Core.csproj.AssemblyReference.cache
+C:\Users\user1\Desktop\Praktic\server\Praktic.Core\obj\Debug\net6.0\Praktic.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user1\Desktop\Praktic\server\Praktic.Core\obj\Debug\net6.0\Praktic.Core.AssemblyInfoInputs.cache
+C:\Users\user1\Desktop\Praktic\server\Praktic.Core\obj\Debug\net6.0\Praktic.Core.AssemblyInfo.cs
+C:\Users\user1\Desktop\Praktic\server\Praktic.Core\obj\Debug\net6.0\Praktic.Core.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\Praktic\server\Praktic.Core\obj\Debug\net6.0\Praktic.Core.dll
+C:\Users\user1\Desktop\Praktic\server\Praktic.Core\obj\Debug\net6.0\refint\Praktic.Core.dll
+C:\Users\user1\Desktop\Praktic\server\Praktic.Core\obj\Debug\net6.0\Praktic.Core.pdb
+C:\Users\user1\Desktop\Praktic\server\Praktic.Core\obj\Debug\net6.0\ref\Praktic.Core.dll

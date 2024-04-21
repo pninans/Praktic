@@ -20,7 +20,7 @@ export class EmployeesDetailsComponent {
   displayedColumns: string[] = ['lastName','firstName', 'tz', 'startWork', 'delete','edit'];
   ELEMENT_DATA: Employee[] = [];
   dataSource: MatTableDataSource<Employee>;
-  clickedRows = new Set<Employee>(); // Declare and initialize clickedRows property
+  clickedRows = new Set<Employee>(); 
   searchText: string = '';
 
   constructor(private _employeesService: EmployeesService,private router: Router) {
@@ -68,7 +68,7 @@ export class EmployeesDetailsComponent {
   }
   
   exportToExcel(): void {
-    // Prepare data to export
+   
     const data = this.dataSource.data.map(element => {
       return {
         'First Name': element.firstName,
@@ -77,17 +77,10 @@ export class EmployeesDetailsComponent {
         'Start Work': element.startWork
       };
     });
-
-    // Create a new workbook
-    const workbook: XLSX.WorkBook = XLSX.utils.book_new();
-
-    // Convert data array to worksheet
+   
+    const workbook: XLSX.WorkBook = XLSX.utils.book_new(); 
     const worksheet: XLSX.WorkSheet = XLSX.utils.json_to_sheet(data);
-
-    // Add the worksheet to the workbook
     XLSX.utils.book_append_sheet(workbook, worksheet, 'Employees');
-
-    // Generate Excel file and save it
     XLSX.writeFile(workbook, 'employees.xlsx');
   }
   

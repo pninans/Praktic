@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FLSZT4agNbFAPHHgPe66sEBda+gg98BcD0hnqwe/GjKcWU1Zi4MiYi7VAqnRlXLJ/3QChGN3W8cr8nQugT6NTQ==",
+  "dgSpecHash": "s+ljfzRAV0fc26P3yLNTapz27Tn6+p7i2heLUn4cZbWkmmRZENmtFzPj3ngUMTf837X86Q/4VaOf/LrgpRQYnA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user1\\Desktop\\Praktic\\prakti\\server\\Praktic.Data\\Praktic.Data.csproj",
+  "projectFilePath": "C:\\Users\\user1\\Desktop\\Praktic\\server\\Praktic.Data\\Praktic.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user1\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\user1\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

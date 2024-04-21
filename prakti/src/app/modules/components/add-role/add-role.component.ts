@@ -44,18 +44,18 @@ export class AddRoleComponent implements OnInit {
     this.role=this.form.value;
     this.dialogRef.close(this.role);
   }
-  // Custom validator for enterWorking field
+ 
   enterWorkingValidator() {
     return (control: any) => {
       if (this.startWork === null) {
-        return { requiredStartWork: true }; // Return error if startWork is null
+        return { requiredStartWork: true };
       } else {
         const enterWorkingDate = new Date(control.value);
         if (enterWorkingDate < new Date(this.startWork)) {
-          return { invalidEnterWorking: true }; // Return error if enterWorking is earlier than startWork
+          return { invalidEnterWorking: true };
         }
       }
-      return null; // Return null if validation passes
+      return null; 
     };
   }
 
