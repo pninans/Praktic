@@ -68,7 +68,6 @@ export class EmployeesDetailsComponent {
   }
   
   exportToExcel(): void {
-   
     const data = this.dataSource.data.map(element => {
       return {
         'First Name': element.firstName,

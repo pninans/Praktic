@@ -3,7 +3,6 @@ import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/fo
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { Role, RoleName } from '../../models/role.model';
-import { DataSharingService } from '../../services/DataSharingService';
 
 @Component({
   selector: 'app-add-role',
@@ -21,14 +20,12 @@ export class AddRoleComponent implements OnInit {
   existingRoles: Role[] = []; 
  
   constructor( public dialogRef: MatDialogRef<AddRoleComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any,private fb: FormBuilder, private dataSharingService: DataSharingService,private router: Router) {
+    @Inject(MAT_DIALOG_DATA) public data: any,private fb: FormBuilder,private router: Router) {
     this.startWork = this.data?.startWork|| null;
     this.existingRoles=this.data?.existingRoles||null;
   }
 
   ngOnInit(): void {
-
-
     this.roleNameOptions = this.roleNameOptions.filter(option => !this.existingRoles?.some(role => role.name === option));
     this.roleNameOptions.push(this.data?.roleData?.name);
     this.form = this.fb.group({

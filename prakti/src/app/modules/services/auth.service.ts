@@ -16,9 +16,6 @@ export class AuthService   {
     constructor(private _http: HttpClient) {}
    login(login:Login){
     return this._http.post("https://localhost:7276/api/Auth",login).pipe(
-    //    tap((response:any)=>{
-    //     localStorage.setItem('pnina ',response.token);
-    //    })
     );
    }
   }

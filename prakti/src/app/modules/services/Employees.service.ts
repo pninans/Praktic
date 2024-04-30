@@ -12,7 +12,7 @@ import { Male } from "@mui/icons-material";
 export class EmployeesService {
 
   constructor(private _http: HttpClient) {}
-//server
+
  
 getEmployeesFromServer(): Observable<Employee[]> {
   return this._http.get<Employee[]>('https://localhost:7276/api/Employees').pipe(
@@ -28,14 +28,10 @@ getEmployeesFromServer(): Observable<Employee[]> {
 
 
 deleteEmployee(employeeId: number): Observable<void> {
-  // Construct the URL with the employeeId in the path
-  ;
-
-  // Send the DELETE request
   return this._http.delete<void>(`https://localhost:7276/api/Employees/${employeeId}`);
 }
-// //server
-  updateEmployee(employeeId: number,employee: Employee): Observable<Employee> {
+
+updateEmployee(employeeId: number,employee: Employee): Observable<Employee> {
     employee.roles.forEach((role, index) => {
       employee.roles[index].enterWorking=new Date(employee.roles[index].enterWorking);
       })
@@ -43,7 +39,8 @@ deleteEmployee(employeeId: number): Observable<void> {
    employee.birthDate=new Date(employee.birthDate);
   return this._http.put<Employee>(`https://localhost:7276/api/Employees/${employeeId}`, employee);
 }
-//  //server
+
+
  addEmployeeToServer(employee: Employee): Observable<Employee> {
    employee.startWork=new Date(employee.startWork);
    employee.birthDate=new Date(employee.birthDate);

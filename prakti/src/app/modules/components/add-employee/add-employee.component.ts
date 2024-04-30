@@ -3,18 +3,22 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AddRoleComponent } from '../add-role/add-role.component';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { DataSharingService } from '../../services/DataSharingService';
 import { Employee } from '../../models/employee.model';
 import { ActivatedRoute, Router } from '@angular/router';
 import { EmployeesService } from '../../services/Employees.service';
 import Swal from 'sweetalert2';
 import { Role } from '../../models/role.model';
 import { Type } from '../../models/employee.model';
+
+
+
 @Component({
   selector: 'app-add-employee',
   templateUrl: './add-employee.component.html',
   styleUrls: ['./add-employee.component.css']
 })
+
+
 export class AddEmployeeComponent implements OnInit {
   employeeForm!: FormGroup;
   typeOptions: string[] = ["MALE", "FEMALE"];
@@ -25,11 +29,9 @@ export class AddEmployeeComponent implements OnInit {
    num=0;
    roles:Role[]=[];
 
-  // Inject the data sharing service and MatDialog
-
-  constructor(private dialog: MatDialog, private dataSharingService: DataSharingService,private route: ActivatedRoute, private _employeesService: EmployeesService, private fb: FormBuilder,private router: Router) {}
+  constructor(private dialog: MatDialog,private route: ActivatedRoute, private _employeesService: EmployeesService, private fb: FormBuilder,private router: Router) {}
+  
   ngOnInit(): void {
-   
         this.employeeForm = this.fb.group({
           firstName: ['', Validators.required],
           lastName: ['', Validators.required],
@@ -58,7 +60,6 @@ export class AddEmployeeComponent implements OnInit {
    }
    
   addEmployee() {
-  
     if (!this.employee) {
        this.employee=this.employeeForm.value,
        this.employee.roles=this.roles;
@@ -94,7 +95,8 @@ export class AddEmployeeComponent implements OnInit {
       }       
       );
     }
-  }  
+  } 
+
   editRole(role: Role,i:number) {
     const dialogRef = this.dialog.open(AddRoleComponent, {
       width: '500px',
@@ -108,7 +110,7 @@ export class AddEmployeeComponent implements OnInit {
        Swal.fire({
         position: "top-end",
         icon: "success",
-        title: "The role has been updated successfully",
+        title: "The role has been updated successfully, (remember to save in the DataBase)",
         showConfirmButton: false,
         timer: 1500
       });
@@ -121,17 +123,14 @@ export class AddEmployeeComponent implements OnInit {
 
   addRole() {
     const dialogRef = this.dialog.open(AddRoleComponent, {
-      width: '500px', // Adjust width as needed
+      width: '500px', 
       data: {
-        startWork: this.employeeForm.get('startWork')?.value||null,
-       // Assuming you have an existing array of roles named 'roles'
-existingRoles:[...(this.employee?.roles || []), ...this.roles]
+        startWork: this.employeeForm.get('startWork')?.value||null,  
+        existingRoles:[...(this.employee?.roles || []), ...this.roles]
 
       }
     });
-    // Subscribe to dialog close event to get returned data if any
     dialogRef.afterClosed().subscribe((role: Role) => { 
-
       if(role)
          {
         if(this.num===1)
@@ -141,7 +140,7 @@ existingRoles:[...(this.employee?.roles || []), ...this.roles]
          Swal.fire({
           position: "top-end",
           icon: "success",
-          title: "The role has been added successfully",
+          title: "The role has been added successfully, (remember to save in the DataBase)",
           showConfirmButton: false,
           timer: 1500
         });
@@ -154,14 +153,13 @@ existingRoles:[...(this.employee?.roles || []), ...this.roles]
 
   validateTZ(control: AbstractControl): { [key: string]: any } | null {
     const tzValue: string = control.value;
-    // Check if the value is not empty and has exactly 9 digits
+   
     if (tzValue && /^\d{9}$/.test(tzValue)) {
       return null; // Valid TZ
     } else {
       return { invalidTZ: true }; // Invalid TZ
     }
   }
-
 
   validateStartWork(){  
      return (control: any) => {
@@ -183,8 +181,6 @@ existingRoles:[...(this.employee?.roles || []), ...this.roles]
     if (rolesStartDates.some(date => startWorkValue > date)) {
        return { invalidStartWork: true }; // Invalid start work date
      }
-     
-  
      return null; // Valid start work date
   }
   
